@@ -40,6 +40,7 @@
     display: flex;
     justify-content: center;
     margin: 3.2rem;
+   
 }
 
 .buttons-container a {
@@ -56,14 +57,17 @@
     color: var(--color-button-text);
 
     transition: background-color 0.2s;
+    padding: 1.2rem;
+    
 }
 
 .buttons-container a:first-child {
-    margin-right: 1.6rem;
+    margin-right: 1.5rem;
 }
 
 .buttons-container a img {
     width: 4rem;
+    
 }
 
 .buttons-container a.study {
@@ -107,8 +111,7 @@
    #page-landing-content {
     max-width: 1100px;
    
-    /*Grid Layout*/
-
+/*Grid Layout*/
     display: grid;
     grid-template-rows: 350px 1fr;
     grid-template-columns: 3fr auto 3fr;
