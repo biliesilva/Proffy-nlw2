@@ -12,71 +12,71 @@ export default function TeacherForm() {
   return (
     <div className="container" id="page-teacher-form">
       <PageHeader
-        title="Que incrível que você quer dar aulas"
-        description="O primeiro passo é preencher esse formulario de inscrição."
+        title="How amazing that you want to teach!"
+        description="The first step is to fill out this registration form."
       />
 
       <main>
         <fieldset>
-          <legend>Seus Dados</legend>
-          <Input name="name" label="Nome Completo" />
-          <Input name="avatar" label="Avatar" />
+          <legend>Type here your informations:</legend>
+          <Input name="name" label="Full Name" />
+          <Input name="avatar" label="Your Avatar" />
           <Input name="whatsapp" label="Whatsapp" />
-          <Textarea name="bio" label="Biografia" />
+          <Textarea name="bio" label="Bio" />
         </fieldset>
 
         <fieldset>
-          <legend>Sobre a aula</legend>
+          <legend>About the Classes:</legend>
           <Select
             name="subject"
-            label="Matéria"
+            label="Subjects"
             options={[
-              { value: "Artes", label: "Artes" },
-              { value: "Biologia", label: "Biologia" },
-              { value: "Geografia", label: "Geografia" },
-              { value: "Matematica", label: "Matematica" },
-              { value: "Ingles", label: "Ingles" },
-              { value: "Historia", label: "Historia" },
-              { value: "Fisica", label: "Fisica" },
-              { value: "Portugues", label: "Portugues" },
-              { value: "Quimica", label: "Quimica" },
+              { value: "Arts", label: "Arts" },
+              { value: "Biology", label: "Biology" },
+              { value: "Geography", label: "Geography" },
+              { value: "Maths", label: "Maths" },
+              { value: "English", label: "English" },
+              { value: "History", label: "History" },
+              { value: "Physics", label: "Physics" },
+              { value: "Portuguese", label: "Portuguese" },
+              { value: "Chemistry", label: "Chemistry" },
             ]}
           />
-          <Input name="cost" label="Custo da sua hora por aula" />
+          <Input name="cost" label="Price for your hour in your Classes:" />
         </fieldset>
 
         <fieldset>
           <legend>
-            Horários Disponiveis
-            <button type="button">+ Novo Horario</button>
+          Available Times
+            <button type="button">+ New Time</button>
           </legend>
 
           <div className="schedule-item">
             <Select
               name="week_day"
-              label="Dia da Semana"
+              label="Week Days"
               options={[
-                { value: "0", label: "Domingo" },
-                { value: "1", label: "Segunda" },
-                { value: "2", label: "Terça" },
-                { value: "3", label: "Quarta" },
-                { value: "4", label: "Quinta" },
-                { value: "5", label: "Sexta" },
-                { value: "6", label: "Sábado" },
+                { value: "0", label: "Sunday" },
+                { value: "1", label: "Monday" },
+                { value: "2", label: "Tuesday" },
+                { value: "3", label: "Wednesday" },
+                { value: "4", label: "Thursday" },
+                { value: "5", label: "Friday" },
+                { value: "6", label: "Saturday" },
               ]}
             />
-            <Input name="from" label="Das" type="time" />
-            <Input name="to" label="Até" type="time" />
+            <Input name="from" label="From" type="time" />
+            <Input name="to" label="To" type="time" />
           </div>
         </fieldset>
 
         <footer>
           <p>
             <img src={warningIcon} alt="Aviso Importante" />
-            Importante <br />
-            Preencha todos os dados
+            Important! <br />
+            Fill in all the information
           </p>
-          <button type="button">Salvar cadastro</button>
+          <button type="button">Save and Register</button>
         </footer>
       </main>
     </div>
