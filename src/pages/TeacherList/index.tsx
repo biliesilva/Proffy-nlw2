@@ -1,33 +1,57 @@
-import React from 'react';
+import React from 'react'
 import PageHeader from '../../components/PageHeader';
+import TeacherItem from "../../components/TeacherItem";
+import Input from "../../components/Input";
+import Select from "../../components/Select";
 
 import './styles.css';
 
 function TeacherList() {
+
     return (
-       <div id="page-teacher-list" className="container">
-         <PageHeader title="These are the avaliable teachers: ">
+      <div className="container" id="page-teacher-list">
+        <PageHeader title="These are the avaliables Teachers">
+          <form id="search-teachers">
+            <Select
+              name="subject"
+              label="Subject"
+              options={[
+                { value: "Arts", label: "Arts" },
+                { value: "Biology", label: "Biology" },
+                { value: "Geography", label: "Geography" },
+                { value: "Maths", label: "Maths" },
+                { value: "English", label: "English" },
+                { value: "History", label: "History" },
+                { value: "Physics", label: "Physics" },
+                { value: "Portuguese", label: "Portuguese" },
+                { value: "Chemistry", label: "Chemistry" },
+              ]}
+            />
+            <Select
+              name="week_day"
+              label="Dia da Semana"
+              options={[
+                { value: "0", label: "Sunday" },
+                { value: "1", label: "Monday" },
+                { value: "2", label: "Tuesday" },
+                { value: "3", label: "Wednesday" },
+                { value: "4", label: "Thursday" },
+                { value: "5", label: "Friday" },
+                { value: "6", label: "Saturday" },
+              ]}
+            />
+  
+  <Input name="time" label="Hora" type="time" />
+        </form>
+      </PageHeader>
 
-             <form id="search-teachers">
-                 <div className="input-block">
-                     <label htmlFor="subject">Subjects</label>
-                     <input type="text" id="subject"/>
-                 </div>
-
-                 <div className="input-block">
-                     <label htmlFor="week-day">Week Day</label>
-                     <input type="text" id="week-day" />
-                 </div>
-
-                 <div className="input-block">
-                     <label htmlFor="time">Time</label>
-                     <input type="text" id="time"/>
-                 </div>
-
-             </form>
-         </PageHeader>    
-       </div>
+      <main>
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+      </main>
+    </div>
     )
 }
 
-export default TeacherList; 
+export default TeacherList;
