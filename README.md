@@ -6,4 +6,4 @@
 
 Under Constrution.
 
-[![Cartão ReadMe](https://github-readme-stats.vercel.app/api/pin/?Username=billiemoreira&repo=github-readme-stats)](https://github.com/anuraghazra/github-readme-stats)
+[![Cartão ReadMe](https://github-readme-stats.vercel.app/api/pin/?Username=billiemoreira&repo=github-readme-stats)](https://https://github.com/billiemoreira/Proffy-nlw2/edit/master/README.md)
