@@ -1,19 +1,14 @@
 import express from 'express';
+import { createRestTypeNode } from 'typescript';
 const app = express();
 
-app.user(express.json());
+app.use(express.json());
 
 
-app.post('/users', (request, response) => {
-    console.log(request.body);
+app.get('/', (request, response) => {
+    return response.json({ message: 'Hello World' });
 
-    const users = [
-        { name: 'Biliane', age: '31' }
-    ];
+}
 
-    return response.json(users);
-});
+app.listen(3333);
 
-//localhost:3333
-
-app.listen(3333); 
